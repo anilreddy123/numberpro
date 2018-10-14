@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<html>
+<head>
+
+    <link href="{% static '/static/css/bootstrap.css' %}" rel="stylesheet" />
+    <!-- FONTAWESOME STYLES-->
+    <link href="{% static '/static/css/font-awesome.min.css' %}" rel="stylesheet" />
+       <!--CUSTOM BASIC STYLES-->
+    <link href="{% static '/static/css/basic.css'%}" rel="stylesheet" />
+    <!--CUSTOM MAIN STYLES-->
+    <link href="{% static '/static/css/custom.css' %}" rel="stylesheet" />
+    <!-- GOOGLE FONTS-->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+    <!-- Drop down-->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+</head>
+    <body>
+
+    <ul>
+    <li class="nav-item">
+      <a class="nav-link" href="/home/">Home</a>
+    </li>
+
+      <li class="nav-item">
+      <a class="nav-link" href="/logout/">log Out</a>
+    </li>
+
+    </ul>
+
+    {% block home %}
+
+<nav class="navbar navbar-expand-sm bg-light">
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link" href="/getnextnumber/">Get Next Number</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/getnumberstatus/">Get Number Status</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/reports/">Reports</a>
+    </li>
+      <li class="nav-item">
+      <a class="nav-link" href="/managerange/">Manage Range</a>
+    </li>
+      <li class="nav-item">
+      <a class="nav-link" href="/mangaereport/">Mangae Report</a>
+    </li>
+      <li class="nav-item">
+      <a class="nav-link" href="/managereservation/">Manage Reservation</a>
+    </li>
+      <li class="nav-item">
+      <a class="nav-link" href="/managerule/">Manage Rule</a>
+    </li>
+
+  {% endblock %}
+
+
+  </ul>
+</nav>
+<br>
+
+
+<div class="container-fluid">
+  <h2>Toll-Free Number Management</h2>
+  <h6>Please click</h6>
+
+</div>
+
+
+</body>
+    </html>
+{% endblock %}
